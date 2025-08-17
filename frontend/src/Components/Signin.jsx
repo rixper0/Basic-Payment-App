@@ -43,7 +43,7 @@ export function Signin() {
     return (
         <div className="bg-slate-400 h-screen flex justify-center">
     <div className="flex flex-col justify-center">
-      <div className="rounded-lg bg-white text-center p-2 h-max px-4" style={{ width : 360, height:350}}>
+      <div className="rounded-lg bg-white text-center p-2 h-max px-4" style={{ width : 360, height:400}}>
             <div className="text-center text-4xl font-bold pt-6">Sign-In</div>
             <div className="text-center text-md pt-1 px-4 pb-4">Sign-in with your account details</div>
 

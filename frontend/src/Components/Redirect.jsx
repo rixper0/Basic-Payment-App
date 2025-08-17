@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 function RedirectSigninOrUp() {
     return (
-        <div className="bg-violet-400 h-screen w-screen flex flex-col items-center ">
-            <div className="text-7xl text-center text-black font-bold pt-5 underline">
-                <p>The Payment App</p>
+        <div className="bg-gray-400 h-screen w-screen flex flex-col items-center ">
+            <div className="text-7xl text-center text-black font-bold pt-5 ">
+                <p>Payment App</p>
                 
             </div>
 

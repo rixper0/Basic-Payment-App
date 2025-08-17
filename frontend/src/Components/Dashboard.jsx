@@ -18,10 +18,12 @@ export function Dashboard() {
         }
     }, [localStorage.getItem('token')]);
     return (
+        <div className='bg-slate-100 h-screen w-screen flex flex-col bg-white0'>
        <div>
             <Appbar/>
             <UserBalance/>
             <UserList/>
+       </div>
        </div>
     )
 }

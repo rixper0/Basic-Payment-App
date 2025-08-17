@@ -16,6 +16,7 @@ export function UserList() {
                     'Content-Type': 'application/json',
                     'credentials' : 'include',
                 }
+                
             })
             if (!response.ok) {
                 throw new Error(`Error: ${response.status}`)
@@ -31,11 +32,18 @@ export function UserList() {
     
 
     const handleClick = function ({userId , firstName, lastName}){
-        sessionStorage.setItem('userId' , userId)
+        sessionStorage.setItem('userId' , userId);
         setName(firstName + lastName);
         sessionStorage.setItem('fullName', firstName +" "+ lastName);
         navigate("/transactions");
     }
+
+    function userDataFiltered() {
+        return userData.filter(user => {
+            return user.firstName.toLowerCase().includes(word.toLowerCase()) || user.lastName.toLowerCase().includes(word.toLowerCase());
+        });
+    }
+
     
     const usersLists = userData.map(user =>
         <div className="flex justify-between ml-4 mt-4" key={user._id}>
@@ -60,8 +68,12 @@ export function UserList() {
     
     return (
         <div>
+            
+            <div className="my-2 flex justify-center">
+                <input className="w-2/3 px-2 py-1 border rounded border-slate-300 rounded-full mt-5" id="filterList" placeholder="Search for users" onChange={(e) => setWord(e.target.value)}/>
+            </div>
             <div className="font-bold mt-6 text-lg text-center">Active Users</div>
-            <div className="my-2"><input className="w-full px-2 py-1 border rounded border-slate-200" id="filterList" placeholder="Search for users" onChange={(e)=>setWord(e.target.value)}></input></div>
+
             <ul>
                 {usersLists}
             </ul>
