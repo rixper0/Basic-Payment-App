@@ -1,7 +1,7 @@
 
-## Built a basic version of paytm as my first decent big project with help of harkirat singh cohort-2 and built the frontend by myself
+A simplified Paytm clone — my first major project, created during Harkirat Singh's Cohort-2, with frontend developed independently
 
-This project is like a simulator for payment app where you can send money to users
-This consists auth using jwts and has mongoDB transactions
-This have signin and signup and user lists, and has transaction simulations where we can send money to other users
---the readme is copied but not false
+This project acts as a basic simulation of a payment application, allowing users to transfer money to one another.
+It features authentication via JWTs and uses MongoDB for handling transactions.
+The app includes user registration and login, displays a list of users, and supports simulated money transfers between accounts.
+
